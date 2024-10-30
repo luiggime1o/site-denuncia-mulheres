@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="shortcut icon" href="imagens/logo.png" sizes="16x16">
+    <link rel="stylesheet" href="css/stylelogin.css">
+    <link rel="stylesheet" href="css/buttonEmer.css">
+</head>
+<body>
+    <div id="emergencyButtonContainer">
+        <button id="emergencyButton" onclick="handleEmergency()"></button>
+      </div>
+    <div class="main-login">
+        <div class="left-login">
+            <h1>Faça seu Login Aqui.<br>Denúncia Segura</h1>
+            <a href="index.html">
+                <img src="imagens/iconelogin.png" class="left-loginimg">
+            </a>
+        </div>
+        <div class="righ-login"></div>
+        <div class="card-login">
+            <h1>LOGIN</h1>
+            <div class="textfield">
+                <label for="usuario"></label>
+                <input type="text" id="loginUsuario" placeholder="Usuário">
+            </div>
+            <div class="textfield">
+                <label for="Senha"></label>
+                <input type="password" id="loginSenha" placeholder="Senha">
+            </div>
+            <button onclick="Login()" class="btn-login">Login</button>
+            <p>Não tem cadastro? Cadastre-se <a href="Cadastro.html">aqui</a></p>
+        </div>
+    </div>
+    <script src="js/login.js"></script>
+    <script src="js/funcEmerButton.js"></script>
+</body>
+</html>
