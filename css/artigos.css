@@ -1,0 +1,46 @@
+.artigos {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.artigo {
+    width: 20%;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    
+}
+
+@media (max-width: 1024px) {
+    .artigo {
+        width: 30%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .artigo {
+        width: 45%;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .artigo {
+        width: 100%;
+    }
+}
+
+.artigo img {
+    max-width: 90%;
+    height: auto;
+}

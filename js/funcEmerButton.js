@@ -1,3 +1,3 @@
 function handleEmergency() {
-    window.location.href = "https://www.youtube.com/shorts/IwkXknwDi10";
+    window.location.href = "https://www.youtube.com/shorts/4SW5ydDfKkk";
 }
