@@ -1,5 +1,4 @@
-/* Reset básico */
-* {
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,8 +16,6 @@ body {
 }
 
 
-
-/* Conteúdo do Painel */
 #adminContent {
     width: 100%;
     max-width: 1200px;
@@ -65,7 +62,6 @@ table tr:last-child td {
     border-bottom: none;
 }
 
-/* Botões */
 button {
     background-color: #28a745;
     color: #fff;
