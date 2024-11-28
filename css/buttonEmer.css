@@ -7,17 +7,29 @@
     border: none;
     border-radius: 5px;
     font-size: 16px;
-    z-index: 9999; /* Aumentado para garantir que o botão fique visível */
-    background-color: rgba(255, 0, 0, 0.5); /* Cor temporária para testar */
+    z-index: 1000;
+    background: transparent;
+    background-image: url(/imagens/switch.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
+#emergencyButton::after {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+}
+
 #emergencyButton:hover {
     background-color: rgb(34, 34, 34);
     opacity: 0.8;
 }
+
+
 #emergencyButton:active {
     box-shadow: 0 1px 1px 1px #000000;
     bottom: 25px; 
