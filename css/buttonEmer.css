@@ -40,12 +40,3 @@
     transform: rotate(0deg) scaleY(1);
     animation: anims 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-
-@keyframes anims {
-    0% {
-        transform: rotate(-30deg) scaleY(0.25);
-    }
-    100% {
-        transform: rotate(0deg) scaleY(1);
-    }
-}
