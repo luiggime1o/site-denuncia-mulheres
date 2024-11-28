@@ -1,4 +1,4 @@
-#emergencyButton {
+#"emergencyButtonContainer {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -18,24 +18,24 @@
     justify-content: center;
     text-align: center;
 }
-#emergencyButton::after {
+#emergencyButtonContainer::after {
     display: block;
     text-align: center;
     margin-top: 5px;
 }
 
-#emergencyButton:hover {
+#emergencyButtonContainer:hover {
     background-color: rgb(34, 34, 34);
     opacity: 0.8;
 }
 
 
-#emergencyButton:active {
+#emergencyButtonContainer:active {
     box-shadow: 0 1px 1px 1px #000000;
     bottom: 25px; 
 }
 
-.background-button:has(#emergencyButton:active) + .emergency {
+.background-button:has(#emergencyButtonContainer:active) + .emergency {
     display: block;
     transform: rotate(0deg) scaleY(1);
     animation: anims 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
