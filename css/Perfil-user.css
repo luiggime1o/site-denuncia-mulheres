@@ -75,3 +75,46 @@ body {
 a{
     color: #333;
 }
+/* Estilo para o botão */
+button {
+    background-color: #f44336; /* Cor de fundo vermelha */
+    color: white;
+    border: none;
+    padding: 0.5em 1.5em;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d32f2f; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilo para a section do logoff */
+.logoff-section {
+    margin-top: 2em;
+    text-align: center;
+}
+
+.logoff-section button {
+    margin-top: 1em;
+    background-color: #f44336;
+    color: white;
+    padding: 0.75em 2em;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.logoff-section button:hover {
+    background-color: #d32f2f;
+}
+
+/* Ajustando a posição do botão de logoff */
+.logoff-section {
+    margin-top: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

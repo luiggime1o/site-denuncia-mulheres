@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/adminstyle.css">
     <link rel="stylesheet" href="css/buttonEmer.css">
+    <link rel="stylesheet" href="css/perfil-Adm.css">
 </head>
 <body>
     <header>
@@ -35,43 +36,45 @@
     </header>
 
     <main>
-        <h2>Bem-vindo ao Painel de Administração</h2>
-        <br>
-        <p>Aqui você pode gerenciar denúncias e usuários.</p>
-        
-        <section class="denuncias"></section>
-            <h2>Denúncias Recebidas</h2>
-            <p>Abaixo estão as denúncias enviadas pelos usuários:</p>
-            <div class="service-cards">
-                <div class="service-card">
-                    <img src="imagens/denuncias.png" alt="Ícone da Denúncia">
-                    <h3>Denúncia 1</h3>
-                    <p>Descrição da denúncia 1.</p>
-                </div>
-                <div class="service-card">
-                    <img src="imagens/denuncias.png" alt="Ícone da Denúncia">
-                    <h3>Denúncia 2</h3>
-                    <p>Descrição da denúncia 2.</p>
-                </div>
-            </div>
-        </section>
+        <h1>Painel de Administração</h1>
 
-        <section class="user-profiles">
-            <h2>Perfis de Usuários</h2>
-            <p>Abaixo estão os perfis dos usuários e as ações disponíveis:</p>
-            <div class="profile-cards">
-                <div class="profile-card">
-                    <img src="imagens/img-user.png" alt="Ícone do Usuário">
-                    <h3>Nome do Usuário</h3>
-                    <p>Descrição do usuário.</p>
-                    <div class="actions">
-                        <button class="action-button">Visualizar Perfil</button>
-                        <button class="action-button">Editar Perfil</button>
-                        <button class="action-button">Excluir Usuário</button>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div id="adminContent">
+            <h2>Denúncias Recebidas</h2>
+            <table id="denunciaTable">
+                <thead>
+                    <tr>
+                        <th>Tipo de Abuso</th>
+                        <th>Data e Hora</th>
+                        <th>Descrição</th>
+                        <th>Contato</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- As denúncias serão carregadas aqui -->
+                </tbody>
+            </table>
+        </div>
+    
+        <script>
+            const isAdmin = localStorage.getItem("isAdmin");
+    
+            if (isAdmin !== "true") {
+                alert("Você não tem permissão para acessar esta página.");
+                window.location.href = "admin-login.html"; 
+            } else {
+
+                const denuncias = JSON.parse(localStorage.getItem("denuncias")) || [];
+                const tableBody = document.getElementById("denunciaTable").getElementsByTagName("tbody")[0];
+    
+                denuncias.forEach(denuncia => {
+                    const row = tableBody.insertRow();
+                    row.insertCell(0).textContent = denuncia.tipoAbuso;
+                    row.insertCell(1).textContent = denuncia.dataIncidente;
+                    row.insertCell(2).textContent = denuncia.descricaoIncidente;
+                    row.insertCell(3).textContent = denuncia.contato;
+                });
+            }
+        </script>
     </main>
 
     <script src="js/script.js"></script>

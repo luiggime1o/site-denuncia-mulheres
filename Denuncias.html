@@ -36,15 +36,68 @@
             </nav>
         </div>
     </header>
-
-    <main>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfyni5Ay-dnYn26l8udkf5n_zO8vtd0nrM9T-oue0xfKsGN6A/viewform?embedded=true" width="640" height="1988" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
-    </main>
-
+    <form id="denunciaForm">
+        <label for="tipoAbuso">Qual é o tipo de abuso ou violência?</label>
+        <div class="radio-group">
+            <label>
+                <input type="radio" name="tipoAbuso" value="Fisico" required> Físico
+            </label>
+            <label>
+                <input type="radio" name="tipoAbuso" value="Emocional" required> Emocional
+            </label>
+            <label>
+                <input type="radio" name="tipoAbuso" value="Sexual" required> Sexual
+            </label>
+            <label>
+                <input type="radio" name="tipoAbuso" value="Financeiro" required> Financeiro
+            </label>
+            <label>
+                <input type="radio" name="tipoAbuso" value="Outro" required> Outro
+            </label>
+        </div>
     
-
+        <label for="dataIncidente">Quando ocorreu o incidente?</label>
+        <input type="datetime-local" id="dataIncidente" name="dataIncidente" required>
     
-
+        <label for="localIncidente">Onde ocorreu o incidente?</label>
+        <input type="text" id="localIncidente" name="localIncidente" required>
+    
+        <label for="conheceAgressor">Você conhece o agressor?</label>
+        <div class="radio-group">
+            <label>
+                <input type="radio" name="conheceAgressor" value="Sim" required> Sim
+            </label>
+            <label>
+                <input type="radio" name="conheceAgressor" value="Não" required> Não
+            </label>
+        </div>
+    
+        <label for="especificacaoAgressor">Caso sim, especifique</label>
+        <textarea id="especificacaoAgressor" name="especificacaoAgressor"></textarea>
+    
+        <label for="descricaoIncidente">Descreva o que aconteceu.</label>
+        <textarea id="descricaoIncidente" name="descricaoIncidente" required></textarea>
+    
+        <label for="perigoImediato">Você está em perigo imediato?</label>
+        <div class="radio-group">
+            <label>
+                <input type="radio" name="perigoImediato" value="Sim" required> Sim
+            </label>
+            <label>
+                <input type="radio" name="perigoImediato" value="Não" required> Não
+            </label>
+        </div>
+    
+        <label for="ajudaBuscada">Você já procurou ajuda de algum serviço ou autoridade?</label>
+        <input type="text" id="ajudaBuscada" name="ajudaBuscada">
+    
+        <label for="contato">Como prefere ser contatada para acompanhamento?</label>
+        <input type="text" id="contato" name="contato" required>
+    
+        <button type="submit">Enviar Denúncia</button>
+    </form>
+    
+    
     <script src="js/script.js"></script>
     <script src="js/scriptcomunidade.js"></script>
     <script src="js/funcEmerButton.js"></script>

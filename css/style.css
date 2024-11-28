@@ -434,3 +434,27 @@ footer {
     color: black;
 }
 
+header nav ul li#usuarioLogadoNome {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+header nav ul li img#profileImage {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    header nav ul li img#profileImage {
+        width: 30px;
+        height: 30px;
+    }
+
+    header nav ul li#usuarioLogadoNome {
+        font-size: 14px;
+    }
+}

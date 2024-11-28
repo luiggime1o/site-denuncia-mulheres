@@ -5,7 +5,7 @@ body{
     margin: 0;
 }
 
-body*{
+body{
     box-sizing: border-box;
 }
 
@@ -33,8 +33,9 @@ body*{
     
 }
 
-.left-loginimg{
-    width: 40vw;
+.left-loginimg {
+    width: 60vw;
+    max-width: 500px;
 }
 
 .right-login{
@@ -89,7 +90,6 @@ body*{
     color: #f8f6f6de;
     margin-bottom: 10px;
 }
-
 .textfield > input::placeholder{
     color: #000000;
 }
@@ -132,7 +132,26 @@ body*{
         width: 50vh;
     }
     .card-login{
-        width: 90% ;
+        width: 90% 
+        ;
     }
-    
+}
+.btn-login{
+    width:100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #000000;
+    background-color: #dddddd;
+    cursor: pointer;
+}
+.denuncias a{
+    text-decoration: none;
+    color: #333;
+    font-size: 1em; 
 }

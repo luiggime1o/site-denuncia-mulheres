@@ -5,12 +5,14 @@ function Login() {
     const usuarioCadastrado = localStorage.getItem('usuario');
     const senhaCadastrada = localStorage.getItem('senha');
 
- 
+
     if (usuario === usuarioCadastrado && senha === senhaCadastrada) {
         alert("Login bem-sucedido!");
-        window.location.href = 'Perfil-user.html'; 
-    } 
-    else {
+
+        localStorage.setItem('usuarioLogado', usuario); 
+        window.location.href = 'perfil-user.html';  
+
+    } else {
         alert("Usuário ou senha incorretos!");
     }
 }

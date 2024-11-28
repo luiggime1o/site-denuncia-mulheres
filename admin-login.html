@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Administrativo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Login Administrativo</h1>
+    <form id="loginForm">
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" required>
+        
+        <label for="password">Senha:</label>
+        <input type="password" id="password" required>
+        
+        <button type="submit">Entrar</button>
+    </form>
+
+    <script>
+        const adminUsername = "admin";
+        const adminPassword = "admin2024";
+
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Impede o envio do formulário tradicional
+
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Verifica se as credenciais são corretas
+            if (username === adminUsername && password === adminPassword) {
+                localStorage.setItem("isAdmin", "true");
+                // Redireciona para a página de administração
+                window.location.href = "Perfil_adm.html";
+            } else {
+                alert("Usuário ou senha incorretos!");
+            }
+        });
+    </script>
+</body>
+</html>
