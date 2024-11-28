@@ -30,7 +30,7 @@
 }
 
 
-#emergencyButtonr:active {
+#emergencyButton:active {
     box-shadow: 0 1px 1px 1px #000000;
     bottom: 25px; 
 }
